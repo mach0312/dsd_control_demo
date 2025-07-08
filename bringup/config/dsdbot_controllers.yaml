@@ -29,7 +29,7 @@ dsdbot_base_controller:
     pose_covariance_diagonal : [0.001, 0.001, 0.001, 0.001, 0.001, 0.01]
     twist_covariance_diagonal: [0.001, 0.001, 0.001, 0.001, 0.001, 0.01]
 
-    open_loop: true
+    open_loop: false
     enable_odom_tf: true
 
     cmd_vel_timeout: 0.5
@@ -68,5 +68,12 @@ dsdbot_base_controller:
     angular.z.min_jerk: 0.0
 
     steering_position_feedback: true
-    max_steering_angle: 12.5644 # 720 degrees in radians
-    min_steering_angle: -12.5644 # -720 degrees in radians
+    max_steering_angle: 2.4435 # 140 degrees in radians
+    min_steering_angle: -2.4435 # -140 degrees in radians
+    max_steering_velocity: 0.3 # rad/s
+
+    reduce_wheel_speed_until_steering_reached: true
+    steering_speed_scale_exponent: 2.0 # Exponent for speed scaling based on steering angle change
+    min_reduced_scale: 0.01 # Minimum scale factor for wheel speed reduction
+    min_phi_delta: 0.2618 # 15 degrees in radians
+    max_phi_delta: 1.5704 # 90 degrees in radians
