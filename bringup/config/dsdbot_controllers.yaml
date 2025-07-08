@@ -69,7 +69,6 @@ dsdbot_base_controller:
 
     steering_position_feedback: true
     max_steering_angle: 2.4435 # 140 degrees in radians
-    min_steering_angle: -2.4435 # -140 degrees in radians
     max_steering_velocity: 0.3 # rad/s
 
     reduce_wheel_speed_until_steering_reached: true
